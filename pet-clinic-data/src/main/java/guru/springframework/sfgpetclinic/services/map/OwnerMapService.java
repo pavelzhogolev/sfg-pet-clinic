@@ -40,7 +40,6 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     public Owner save(Owner object) {
 
         if( object != null ) {
-            if( object.getPets() != null ) {
                 object.getPets().forEach( pet -> {
                     if( pet.getPetType() != null ) {
                         if( pet.getPetType().getId() == null ){
@@ -54,8 +53,7 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
                         Pet savedPet = petService.save( pet );
                         pet.setId( savedPet.getId() );
                     }
-                });
-            }
+                } );
             return super.save(object);
         }
 
