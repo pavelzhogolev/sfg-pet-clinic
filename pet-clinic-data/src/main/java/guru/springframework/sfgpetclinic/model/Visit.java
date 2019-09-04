@@ -12,7 +12,7 @@ public class Visit extends BaseEntity {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate( LocalDate date ) {
         this.date = date;
     }
 
@@ -20,7 +20,7 @@ public class Visit extends BaseEntity {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription( String description ) {
         this.description = description;
     }
 
