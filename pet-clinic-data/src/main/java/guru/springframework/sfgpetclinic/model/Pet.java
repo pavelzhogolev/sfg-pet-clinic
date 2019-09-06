@@ -6,10 +6,8 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Getter
-@Setter
-@Entity
-@Table( name = "pets" )
+@Getter @Setter
+@Entity @Table( name = "pets" )
 public class Pet extends BaseEntity {
 
     @Column( name = "name" )
